@@ -1,4 +1,4 @@
-codeunit 50100 "Registry Management2"
+codeunit 71735575 "Registry Management2"
 {
     // version TL2.0
 
