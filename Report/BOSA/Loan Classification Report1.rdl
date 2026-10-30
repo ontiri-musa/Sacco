@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportTitle">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReportTitle</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportTitle</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="EntryNo_LoanClassificationEntry">
+          <DataField>EntryNo_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="LoanNo_LoanClassificationEntry">
+          <DataField>LoanNo_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="ClassificationDate_LoanClassificationEntry">
+          <DataField>ClassificationDate_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="ClassificationTime_LoanClassificationEntry">
+          <DataField>ClassificationTime_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="Description_LoanClassificationEntry">
+          <DataField>Description_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="MemberNo_LoanClassificationEntry">
+          <DataField>MemberNo_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="MemberName_LoanClassificationEntry">
+          <DataField>MemberName_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanClassificationEntry">
+          <DataField>ApprovedAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanClassificationEntryFormat">
+          <DataField>ApprovedAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="RepaymentMethod_LoanClassificationEntry">
+          <DataField>RepaymentMethod_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RepaymentPeriod_LoanClassificationEntry">
+          <DataField>RepaymentPeriod_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RemainingPeriod_LoanClassificationEntry">
+          <DataField>RemainingPeriod_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RemainingPeriod_LoanClassificationEntryFormat">
+          <DataField>RemainingPeriod_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="RemainingPrincipalAmount_LoanClassificationEntry">
+          <DataField>RemainingPrincipalAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RemainingPrincipalAmount_LoanClassificationEntryFormat">
+          <DataField>RemainingPrincipalAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="RemainingInterestAmount_LoanClassificationEntry">
+          <DataField>RemainingInterestAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RemainingInterestAmount_LoanClassificationEntryFormat">
+          <DataField>RemainingInterestAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="PrincipalInstallment_LoanClassificationEntry">
+          <DataField>PrincipalInstallment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="PrincipalInstallment_LoanClassificationEntryFormat">
+          <DataField>PrincipalInstallment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="InterestInstallment_LoanClassificationEntry">
+          <DataField>InterestInstallment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="InterestInstallment_LoanClassificationEntryFormat">
+          <DataField>InterestInstallment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="TotalInstallment_LoanClassificationEntry">
+          <DataField>TotalInstallment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="TotalInstallment_LoanClassificationEntryFormat">
+          <DataField>TotalInstallment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="PrincipalArrearsAmount_LoanClassificationEntry">
+          <DataField>PrincipalArrearsAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="PrincipalArrearsAmount_LoanClassificationEntryFormat">
+          <DataField>PrincipalArrearsAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="InterestArrearsAmount_LoanClassificationEntry">
+          <DataField>InterestArrearsAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="InterestArrearsAmount_LoanClassificationEntryFormat">
+          <DataField>InterestArrearsAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="Penalty_Arrears">
+          <DataField>Penalty_Arrears</DataField>
+        </Field>
+        <Field Name="Penalty_ArrearsFormat">
+          <DataField>Penalty_ArrearsFormat</DataField>
+        </Field>
+        <Field Name="Ledger_Fee_Arrears">
+          <DataField>Ledger_Fee_Arrears</DataField>
+        </Field>
+        <Field Name="Ledger_Fee_ArrearsFormat">
+          <DataField>Ledger_Fee_ArrearsFormat</DataField>
+        </Field>
+        <Field Name="TotalArrearsAmount_LoanClassificationEntry">
+          <DataField>TotalArrearsAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="TotalArrearsAmount_LoanClassificationEntryFormat">
+          <DataField>TotalArrearsAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanClassificationEntry">
+          <DataField>OutstandingBalance_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanClassificationEntryFormat">
+          <DataField>OutstandingBalance_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="ProvisioningAmount_LoanClassificationEntry">
+          <DataField>ProvisioningAmount_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="ProvisioningAmount_LoanClassificationEntryFormat">
+          <DataField>ProvisioningAmount_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="ClassificationClass_LoanClassificationEntry">
+          <DataField>ClassificationClass_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="RepaymentFrequency_LoanClassificationEntry">
+          <DataField>RepaymentFrequency_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="NoofDaysinArrears_LoanClassificationEntry">
+          <DataField>NoofDaysinArrears_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="LastPaymentDate_LoanClassificationEntry">
+          <DataField>LastPaymentDate_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="NoofDefaultedInstallment_LoanClassificationEntry">
+          <DataField>NoofDefaultedInstallment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="PrincipalOverpayment_LoanClassificationEntry">
+          <DataField>PrincipalOverpayment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="PrincipalOverpayment_LoanClassificationEntryFormat">
+          <DataField>PrincipalOverpayment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="InterestOverpayment_LoanClassificationEntry">
+          <DataField>InterestOverpayment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="InterestOverpayment_LoanClassificationEntryFormat">
+          <DataField>InterestOverpayment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="TotalOverpayment_LoanClassificationEntry">
+          <DataField>TotalOverpayment_LoanClassificationEntry</DataField>
+        </Field>
+        <Field Name="TotalOverpayment_LoanClassificationEntryFormat">
+          <DataField>TotalOverpayment_LoanClassificationEntryFormat</DataField>
+        </Field>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="TotalAmount_1">
+          <DataField>TotalAmount_1</DataField>
+        </Field>
+        <Field Name="TotalAmount_1Format">
+          <DataField>TotalAmount_1Format</DataField>
+        </Field>
+        <Field Name="TotalAmount_2">
+          <DataField>TotalAmount_2</DataField>
+        </Field>
+        <Field Name="TotalAmount_2Format">
+          <DataField>TotalAmount_2Format</DataField>
+        </Field>
+        <Field Name="TotalAmount_3">
+          <DataField>TotalAmount_3</DataField>
+        </Field>
+        <Field Name="TotalAmount_3Format">
+          <DataField>TotalAmount_3Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

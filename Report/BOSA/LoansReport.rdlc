@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportTitle">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReportTitle</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportTitle</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_LoanApplication">
+          <DataField>No_LoanApplication</DataField>
+        </Field>
+        <Field Name="MemberNo_LoanApplication">
+          <DataField>MemberNo_LoanApplication</DataField>
+        </Field>
+        <Field Name="MemberName_LoanApplication">
+          <DataField>MemberName_LoanApplication</DataField>
+        </Field>
+        <Field Name="LoanProductType_LoanApplication">
+          <DataField>LoanProductType_LoanApplication</DataField>
+        </Field>
+        <Field Name="Description_LoanApplication">
+          <DataField>Description_LoanApplication</DataField>
+        </Field>
+        <Field Name="InterestRate_LoanApplication">
+          <DataField>InterestRate_LoanApplication</DataField>
+        </Field>
+        <Field Name="InterestRate_LoanApplicationFormat">
+          <DataField>InterestRate_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="RepaymentPeriod_LoanApplication">
+          <DataField>RepaymentPeriod_LoanApplication</DataField>
+        </Field>
+        <Field Name="RepaymentMethod_LoanApplication">
+          <DataField>RepaymentMethod_LoanApplication</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoanApplication">
+          <DataField>RequestedAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoanApplicationFormat">
+          <DataField>RequestedAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanApplication">
+          <DataField>ApprovedAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanApplicationFormat">
+          <DataField>ApprovedAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalSavingsAmount_LoanApplication">
+          <DataField>TotalSavingsAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalSavingsAmount_LoanApplicationFormat">
+          <DataField>TotalSavingsAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalDepositsAmount_LoanApplication">
+          <DataField>TotalDepositsAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalDepositsAmount_LoanApplicationFormat">
+          <DataField>TotalDepositsAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalSharesAmount_LoanApplication">
+          <DataField>TotalSharesAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalSharesAmount_LoanApplicationFormat">
+          <DataField>TotalSharesAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="Max__Eligible_Amount_Deposit">
+          <DataField>Max__Eligible_Amount_Deposit</DataField>
+        </Field>
+        <Field Name="Max__Eligible_Amount_DepositFormat">
+          <DataField>Max__Eligible_Amount_DepositFormat</DataField>
+        </Field>
+        <Field Name="NoSeries_LoanApplication">
+          <DataField>NoSeries_LoanApplication</DataField>
+        </Field>
+        <Field Name="RefinanceAnotherLoan_LoanApplication">
+          <DataField>RefinanceAnotherLoan_LoanApplication</DataField>
+        </Field>
+        <Field Name="Status_LoanApplication">
+          <DataField>Status_LoanApplication</DataField>
+        </Field>
+        <Field Name="DateofCompletion_LoanApplication">
+          <DataField>DateofCompletion_LoanApplication</DataField>
+        </Field>
+        <Field Name="NextDueDate_LoanApplication">
+          <DataField>NextDueDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="CreatedBy_LoanApplication">
+          <DataField>CreatedBy_LoanApplication</DataField>
+        </Field>
+        <Field Name="CreatedDate_LoanApplication">
+          <DataField>CreatedDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="CreatedTime_LoanApplication">
+          <DataField>CreatedTime_LoanApplication</DataField>
+        </Field>
+        <Field Name="AppraisedBy_LoanApplication">
+          <DataField>AppraisedBy_LoanApplication</DataField>
+        </Field>
+        <Field Name="AppraisalDate_LoanApplication">
+          <DataField>AppraisalDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="AppraisalTime_LoanApplication">
+          <DataField>AppraisalTime_LoanApplication</DataField>
+        </Field>
+        <Field Name="ApprovedBy_LoanApplication">
+          <DataField>ApprovedBy_LoanApplication</DataField>
+        </Field>
+        <Field Name="ApprovedDate_LoanApplication">
+          <DataField>ApprovedDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="ApprovedTime_LoanApplication">
+          <DataField>ApprovedTime_LoanApplication</DataField>
+        </Field>
+        <Field Name="Posted_LoanApplication">
+          <DataField>Posted_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalGuaranteedAmount_LoanApplication">
+          <DataField>TotalGuaranteedAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalGuaranteedAmount_LoanApplicationFormat">
+          <DataField>TotalGuaranteedAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalSecurityAmount_LoanApplication">
+          <DataField>TotalSecurityAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalSecurityAmount_LoanApplicationFormat">
+          <DataField>TotalSecurityAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="Remarks_LoanApplication">
+          <DataField>Remarks_LoanApplication</DataField>
+        </Field>
+        <Field Name="NoofGuarantors_LoanApplication">
+          <DataField>NoofGuarantors_LoanApplication</DataField>
+        </Field>
+        <Field Name="NoofOtherSecurities_LoanApplication">
+          <DataField>NoofOtherSecurities_LoanApplication</DataField>
+        </Field>
+        <Field Name="NoofLoansRefinanced_LoanApplication">
+          <DataField>NoofLoansRefinanced_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalRefinancedAmount_LoanApplication">
+          <DataField>TotalRefinancedAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalRefinancedAmount_LoanApplicationFormat">
+          <DataField>TotalRefinancedAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_LoanApplication">
+          <DataField>GlobalDimension1Code_LoanApplication</DataField>
+        </Field>
+        <Field Name="RepaymentFrequency_LoanApplication">
+          <DataField>RepaymentFrequency_LoanApplication</DataField>
+        </Field>
+        <Field Name="DisbursedBy_LoanApplication">
+          <DataField>DisbursedBy_LoanApplication</DataField>
+        </Field>
+        <Field Name="DisbursalDate_LoanApplication">
+          <DataField>DisbursalDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="DisbursalTime_LoanApplication">
+          <DataField>DisbursalTime_LoanApplication</DataField>
+        </Field>
+        <Field Name="FOSAAccountNo_LoanApplication">
+          <DataField>FOSAAccountNo_LoanApplication</DataField>
+        </Field>
+        <Field Name="PhoneNo_LoanApplication">
+          <DataField>PhoneNo_LoanApplication</DataField>
+        </Field>
+        <Field Name="FOSAAccountName_LoanApplication">
+          <DataField>FOSAAccountName_LoanApplication</DataField>
+        </Field>
+        <Field Name="NetAmount_LoanApplication">
+          <DataField>NetAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="NetAmount_LoanApplicationFormat">
+          <DataField>NetAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="CompanyName_LoanApplication">
+          <DataField>CompanyName_LoanApplication</DataField>
+        </Field>
+        <Field Name="PrincipalArrearsAmount_LoanApplication">
+          <DataField>PrincipalArrearsAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="PrincipalArrearsAmount_LoanApplicationFormat">
+          <DataField>PrincipalArrearsAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="InterestArrearsAmount_LoanApplication">
+          <DataField>InterestArrearsAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="InterestArrearsAmount_LoanApplicationFormat">
+          <DataField>InterestArrearsAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalArrearsAmount_LoanApplication">
+          <DataField>TotalArrearsAmount_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalArrearsAmount_LoanApplicationFormat">
+          <DataField>TotalArrearsAmount_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="PrincipalOverpayment_LoanApplication">
+          <DataField>PrincipalOverpayment_LoanApplication</DataField>
+        </Field>
+        <Field Name="PrincipalOverpayment_LoanApplicationFormat">
+          <DataField>PrincipalOverpayment_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="InterestOverpayment_LoanApplication">
+          <DataField>InterestOverpayment_LoanApplication</DataField>
+        </Field>
+        <Field Name="InterestOverpayment_LoanApplicationFormat">
+          <DataField>InterestOverpayment_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="TotalOverpayment_LoanApplication">
+          <DataField>TotalOverpayment_LoanApplication</DataField>
+        </Field>
+        <Field Name="TotalOverpayment_LoanApplicationFormat">
+          <DataField>TotalOverpayment_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="TotalAmount_1">
+          <DataField>TotalAmount_1</DataField>
+        </Field>
+        <Field Name="TotalAmount_1Format">
+          <DataField>TotalAmount_1Format</DataField>
+        </Field>
+        <Field Name="TotalAmount_2">
+          <DataField>TotalAmount_2</DataField>
+        </Field>
+        <Field Name="TotalAmount_2Format">
+          <DataField>TotalAmount_2Format</DataField>
+        </Field>
+        <Field Name="TotalAmount_3">
+          <DataField>TotalAmount_3</DataField>
+        </Field>
+        <Field Name="TotalAmount_3Format">
+          <DataField>TotalAmount_3Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

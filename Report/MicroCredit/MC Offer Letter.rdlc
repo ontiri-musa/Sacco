@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="HeaderLn1">
+          <DataField>HeaderLn1</DataField>
+        </Field>
+        <Field Name="HeaderLn2">
+          <DataField>HeaderLn2</DataField>
+        </Field>
+        <Field Name="HeaderLn3">
+          <DataField>HeaderLn3</DataField>
+        </Field>
+        <Field Name="HeaderLn4">
+          <DataField>HeaderLn4</DataField>
+        </Field>
+        <Field Name="ReferenceNo">
+          <DataField>ReferenceNo</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="PostalAddress">
+          <DataField>PostalAddress</DataField>
+        </Field>
+        <Field Name="PhysicalAddress">
+          <DataField>PhysicalAddress</DataField>
+        </Field>
+        <Field Name="Salutation">
+          <DataField>Salutation</DataField>
+        </Field>
+        <Field Name="AmountInWords">
+          <DataField>AmountInWords</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanApplications">
+          <DataField>ApprovedAmount_LoanApplications</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoanApplicationsFormat">
+          <DataField>ApprovedAmount_LoanApplicationsFormat</DataField>
+        </Field>
+        <Field Name="ApplicationDate_LoanApplications">
+          <DataField>ApplicationDate_LoanApplications</DataField>
+        </Field>
+        <Field Name="Interest_LoanApplications">
+          <DataField>Interest_LoanApplications</DataField>
+        </Field>
+        <Field Name="Interest_LoanApplicationsFormat">
+          <DataField>Interest_LoanApplicationsFormat</DataField>
+        </Field>
+        <Field Name="ReportName">
+          <DataField>ReportName</DataField>
+        </Field>
+        <Field Name="LoanDescription">
+          <DataField>LoanDescription</DataField>
+        </Field>
+        <Field Name="NoofInstallments">
+          <DataField>NoofInstallments</DataField>
+        </Field>
+        <Field Name="InstallmentAmount">
+          <DataField>InstallmentAmount</DataField>
+        </Field>
+        <Field Name="InstallmentAmountFormat">
+          <DataField>InstallmentAmountFormat</DataField>
+        </Field>
+        <Field Name="AppraisalFee">
+          <DataField>AppraisalFee</DataField>
+        </Field>
+        <Field Name="AppraisalFeeFormat">
+          <DataField>AppraisalFeeFormat</DataField>
+        </Field>
+        <Field Name="RefinanceFee">
+          <DataField>RefinanceFee</DataField>
+        </Field>
+        <Field Name="RefinanceFeeFormat">
+          <DataField>RefinanceFeeFormat</DataField>
+        </Field>
+        <Field Name="InsuranceFee">
+          <DataField>InsuranceFee</DataField>
+        </Field>
+        <Field Name="InsuranceFeeFormat">
+          <DataField>InsuranceFeeFormat</DataField>
+        </Field>
+        <Field Name="FooterLn1">
+          <DataField>FooterLn1</DataField>
+        </Field>
+        <Field Name="FooterLn2">
+          <DataField>FooterLn2</DataField>
+        </Field>
+        <Field Name="Paragraph1Ln1">
+          <DataField>Paragraph1Ln1</DataField>
+        </Field>
+        <Field Name="Paragraph1Ln2">
+          <DataField>Paragraph1Ln2</DataField>
+        </Field>
+        <Field Name="Paragraph1Ln3">
+          <DataField>Paragraph1Ln3</DataField>
+        </Field>
+        <Field Name="Title1">
+          <DataField>Title1</DataField>
+        </Field>
+        <Field Name="Title2">
+          <DataField>Title2</DataField>
+        </Field>
+        <Field Name="Title3">
+          <DataField>Title3</DataField>
+        </Field>
+        <Field Name="Title4">
+          <DataField>Title4</DataField>
+        </Field>
+        <Field Name="Title5">
+          <DataField>Title5</DataField>
+        </Field>
+        <Field Name="Title6">
+          <DataField>Title6</DataField>
+        </Field>
+        <Field Name="Title7">
+          <DataField>Title7</DataField>
+        </Field>
+        <Field Name="Title8">
+          <DataField>Title8</DataField>
+        </Field>
+        <Field Name="Title9">
+          <DataField>Title9</DataField>
+        </Field>
+        <Field Name="Title10">
+          <DataField>Title10</DataField>
+        </Field>
+        <Field Name="Title11">
+          <DataField>Title11</DataField>
+        </Field>
+        <Field Name="Title12">
+          <DataField>Title12</DataField>
+        </Field>
+        <Field Name="Title13">
+          <DataField>Title13</DataField>
+        </Field>
+        <Field Name="Title14">
+          <DataField>Title14</DataField>
+        </Field>
+        <Field Name="Title15">
+          <DataField>Title15</DataField>
+        </Field>
+        <Field Name="Text1">
+          <DataField>Text1</DataField>
+        </Field>
+        <Field Name="Text3">
+          <DataField>Text3</DataField>
+        </Field>
+        <Field Name="Text3_1">
+          <DataField>Text3_1</DataField>
+        </Field>
+        <Field Name="Text4">
+          <DataField>Text4</DataField>
+        </Field>
+        <Field Name="Text4_1">
+          <DataField>Text4_1</DataField>
+        </Field>
+        <Field Name="Text5">
+          <DataField>Text5</DataField>
+        </Field>
+        <Field Name="Text6">
+          <DataField>Text6</DataField>
+        </Field>
+        <Field Name="Text7">
+          <DataField>Text7</DataField>
+        </Field>
+        <Field Name="Text7_1">
+          <DataField>Text7_1</DataField>
+        </Field>
+        <Field Name="Text7_2">
+          <DataField>Text7_2</DataField>
+        </Field>
+        <Field Name="Text8">
+          <DataField>Text8</DataField>
+        </Field>
+        <Field Name="Text9">
+          <DataField>Text9</DataField>
+        </Field>
+        <Field Name="Text9_1">
+          <DataField>Text9_1</DataField>
+        </Field>
+        <Field Name="Text10">
+          <DataField>Text10</DataField>
+        </Field>
+        <Field Name="Text11">
+          <DataField>Text11</DataField>
+        </Field>
+        <Field Name="Text11_1">
+          <DataField>Text11_1</DataField>
+        </Field>
+        <Field Name="Text12">
+          <DataField>Text12</DataField>
+        </Field>
+        <Field Name="Text12_1">
+          <DataField>Text12_1</DataField>
+        </Field>
+        <Field Name="Text13">
+          <DataField>Text13</DataField>
+        </Field>
+        <Field Name="Text14">
+          <DataField>Text14</DataField>
+        </Field>
+        <Field Name="Text15">
+          <DataField>Text15</DataField>
+        </Field>
+        <Field Name="Text16">
+          <DataField>Text16</DataField>
+        </Field>
+        <Field Name="Text17">
+          <DataField>Text17</DataField>
+        </Field>
+        <Field Name="Text18">
+          <DataField>Text18</DataField>
+        </Field>
+        <Field Name="Text19">
+          <DataField>Text19</DataField>
+        </Field>
+        <Field Name="Text20">
+          <DataField>Text20</DataField>
+        </Field>
+        <Field Name="Text21">
+          <DataField>Text21</DataField>
+        </Field>
+        <Field Name="Text22">
+          <DataField>Text22</DataField>
+        </Field>
+        <Field Name="Text23">
+          <DataField>Text23</DataField>
+        </Field>
+        <Field Name="Text24">
+          <DataField>Text24</DataField>
+        </Field>
+        <Field Name="Text25">
+          <DataField>Text25</DataField>
+        </Field>
+        <Field Name="Text26">
+          <DataField>Text26</DataField>
+        </Field>
+        <Field Name="Text27">
+          <DataField>Text27</DataField>
+        </Field>
+        <Field Name="Text28">
+          <DataField>Text28</DataField>
+        </Field>
+        <Field Name="Text29">
+          <DataField>Text29</DataField>
+        </Field>
+        <Field Name="Text30">
+          <DataField>Text30</DataField>
+        </Field>
+        <Field Name="Text31">
+          <DataField>Text31</DataField>
+        </Field>
+        <Field Name="Text32">
+          <DataField>Text32</DataField>
+        </Field>
+        <Field Name="Text33">
+          <DataField>Text33</DataField>
+        </Field>
+        <Field Name="Text34">
+          <DataField>Text34</DataField>
+        </Field>
+        <Field Name="Text35">
+          <DataField>Text35</DataField>
+        </Field>
+        <Field Name="Text36">
+          <DataField>Text36</DataField>
+        </Field>
+        <Field Name="Text37">
+          <DataField>Text37</DataField>
+        </Field>
+        <Field Name="Text38">
+          <DataField>Text38</DataField>
+        </Field>
+        <Field Name="Text39">
+          <DataField>Text39</DataField>
+        </Field>
+        <Field Name="Text40">
+          <DataField>Text40</DataField>
+        </Field>
+        <Field Name="Text40_1">
+          <DataField>Text40_1</DataField>
+        </Field>
+        <Field Name="Text41">
+          <DataField>Text41</DataField>
+        </Field>
+        <Field Name="Text42">
+          <DataField>Text42</DataField>
+        </Field>
+        <Field Name="Text43">
+          <DataField>Text43</DataField>
+        </Field>
+        <Field Name="Text44">
+          <DataField>Text44</DataField>
+        </Field>
+        <Field Name="PurposeDescription">
+          <DataField>PurposeDescription</DataField>
+        </Field>
+        <Field Name="Text45">
+          <DataField>Text45</DataField>
+        </Field>
+        <Field Name="Title16">
+          <DataField>Title16</DataField>
+        </Field>
+        <Field Name="LoanGuarantorText">
+          <DataField>LoanGuarantorText</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

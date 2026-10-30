@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="consolidatedPrinipal">
+          <DataField>consolidatedPrinipal</DataField>
+        </Field>
+        <Field Name="consolidatedPrinipalFormat">
+          <DataField>consolidatedPrinipalFormat</DataField>
+        </Field>
+        <Field Name="consolidatedInt">
+          <DataField>consolidatedInt</DataField>
+        </Field>
+        <Field Name="consolidatedIntFormat">
+          <DataField>consolidatedIntFormat</DataField>
+        </Field>
+        <Field Name="developmentPrinipal">
+          <DataField>developmentPrinipal</DataField>
+        </Field>
+        <Field Name="developmentPrinipalFormat">
+          <DataField>developmentPrinipalFormat</DataField>
+        </Field>
+        <Field Name="developmentInt">
+          <DataField>developmentInt</DataField>
+        </Field>
+        <Field Name="developmentIntFormat">
+          <DataField>developmentIntFormat</DataField>
+        </Field>
+        <Field Name="educationPrinipal">
+          <DataField>educationPrinipal</DataField>
+        </Field>
+        <Field Name="educationPrinipalFormat">
+          <DataField>educationPrinipalFormat</DataField>
+        </Field>
+        <Field Name="educationInt">
+          <DataField>educationInt</DataField>
+        </Field>
+        <Field Name="educationIntFormat">
+          <DataField>educationIntFormat</DataField>
+        </Field>
+        <Field Name="emergencyPrinipal">
+          <DataField>emergencyPrinipal</DataField>
+        </Field>
+        <Field Name="emergencyPrinipalFormat">
+          <DataField>emergencyPrinipalFormat</DataField>
+        </Field>
+        <Field Name="emergencyInt">
+          <DataField>emergencyInt</DataField>
+        </Field>
+        <Field Name="emergencyIntFormat">
+          <DataField>emergencyIntFormat</DataField>
+        </Field>
+        <Field Name="eastRevolvingFundPrinipal">
+          <DataField>eastRevolvingFundPrinipal</DataField>
+        </Field>
+        <Field Name="eastRevolvingFundPrinipalFormat">
+          <DataField>eastRevolvingFundPrinipalFormat</DataField>
+        </Field>
+        <Field Name="eastRevolvingFundInt">
+          <DataField>eastRevolvingFundInt</DataField>
+        </Field>
+        <Field Name="eastRevolvingFundIntFormat">
+          <DataField>eastRevolvingFundIntFormat</DataField>
+        </Field>
+        <Field Name="investmentPrinipal">
+          <DataField>investmentPrinipal</DataField>
+        </Field>
+        <Field Name="investmentPrinipalFormat">
+          <DataField>investmentPrinipalFormat</DataField>
+        </Field>
+        <Field Name="investmentInt">
+          <DataField>investmentInt</DataField>
+        </Field>
+        <Field Name="investmentIntFormat">
+          <DataField>investmentIntFormat</DataField>
+        </Field>
+        <Field Name="konzaPrinipal">
+          <DataField>konzaPrinipal</DataField>
+        </Field>
+        <Field Name="konzaPrinipalFormat">
+          <DataField>konzaPrinipalFormat</DataField>
+        </Field>
+        <Field Name="konzaInt">
+          <DataField>konzaInt</DataField>
+        </Field>
+        <Field Name="konzaIntFormat">
+          <DataField>konzaIntFormat</DataField>
+        </Field>
+        <Field Name="mobilePrinipal">
+          <DataField>mobilePrinipal</DataField>
+        </Field>
+        <Field Name="mobilePrinipalFormat">
+          <DataField>mobilePrinipalFormat</DataField>
+        </Field>
+        <Field Name="mobileInt">
+          <DataField>mobileInt</DataField>
+        </Field>
+        <Field Name="mobileIntFormat">
+          <DataField>mobileIntFormat</DataField>
+        </Field>
+        <Field Name="Full_Name">
+          <DataField>Full_Name</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="picture">
+          <DataField>picture</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+        <Field Name="Deposit">
+          <DataField>Deposit</DataField>
+        </Field>
+        <Field Name="DepositFormat">
+          <DataField>DepositFormat</DataField>
+        </Field>
+        <Field Name="lnTotals">
+          <DataField>lnTotals</DataField>
+        </Field>
+        <Field Name="lnTotalsFormat">
+          <DataField>lnTotalsFormat</DataField>
+        </Field>
+        <Field Name="district">
+          <DataField>district</DataField>
+        </Field>
+        <Field Name="Payroll_No_">
+          <DataField>Payroll_No_</DataField>
+        </Field>
+        <Field Name="Xhares">
+          <DataField>Xhares</DataField>
+        </Field>
+        <Field Name="XharesFormat">
+          <DataField>XharesFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

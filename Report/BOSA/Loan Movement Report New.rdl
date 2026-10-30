@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Picture">
+          <DataField>Picture</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Name">
+          <DataField>CompanyInfo_Name</DataField>
+        </Field>
+        <Field Name="CompanyInfo_Address">
+          <DataField>CompanyInfo_Address</DataField>
+        </Field>
+        <Field Name="CompanyInfo_PostCode">
+          <DataField>CompanyInfo_PostCode</DataField>
+        </Field>
+        <Field Name="CompanyInfo_City">
+          <DataField>CompanyInfo_City</DataField>
+        </Field>
+        <Field Name="MemberNo_LoanApplication">
+          <DataField>MemberNo_LoanApplication</DataField>
+        </Field>
+        <Field Name="MemberName_LoanApplication">
+          <DataField>MemberName_LoanApplication</DataField>
+        </Field>
+        <Field Name="Description_LoanApplication">
+          <DataField>Description_LoanApplication</DataField>
+        </Field>
+        <Field Name="Date_of_Completion">
+          <DataField>Date_of_Completion</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanApplication">
+          <DataField>OutstandingBalance_LoanApplication</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoanApplicationFormat">
+          <DataField>OutstandingBalance_LoanApplicationFormat</DataField>
+        </Field>
+        <Field Name="DisbursalDate_LoanApplication">
+          <DataField>DisbursalDate_LoanApplication</DataField>
+        </Field>
+        <Field Name="PhoneNo">
+          <DataField>PhoneNo</DataField>
+        </Field>
+        <Field Name="OpenBal">
+          <DataField>OpenBal</DataField>
+        </Field>
+        <Field Name="OpenBalFormat">
+          <DataField>OpenBalFormat</DataField>
+        </Field>
+        <Field Name="Period">
+          <DataField>Period</DataField>
+        </Field>
+        <Field Name="JanCont">
+          <DataField>JanCont</DataField>
+        </Field>
+        <Field Name="JanContFormat">
+          <DataField>JanContFormat</DataField>
+        </Field>
+        <Field Name="FebCont">
+          <DataField>FebCont</DataField>
+        </Field>
+        <Field Name="FebContFormat">
+          <DataField>FebContFormat</DataField>
+        </Field>
+        <Field Name="MarchCont">
+          <DataField>MarchCont</DataField>
+        </Field>
+        <Field Name="MarchContFormat">
+          <DataField>MarchContFormat</DataField>
+        </Field>
+        <Field Name="AprilCont">
+          <DataField>AprilCont</DataField>
+        </Field>
+        <Field Name="AprilContFormat">
+          <DataField>AprilContFormat</DataField>
+        </Field>
+        <Field Name="MayCont">
+          <DataField>MayCont</DataField>
+        </Field>
+        <Field Name="MayContFormat">
+          <DataField>MayContFormat</DataField>
+        </Field>
+        <Field Name="JuneCont">
+          <DataField>JuneCont</DataField>
+        </Field>
+        <Field Name="JuneContFormat">
+          <DataField>JuneContFormat</DataField>
+        </Field>
+        <Field Name="JulyCont">
+          <DataField>JulyCont</DataField>
+        </Field>
+        <Field Name="JulyContFormat">
+          <DataField>JulyContFormat</DataField>
+        </Field>
+        <Field Name="AugCont">
+          <DataField>AugCont</DataField>
+        </Field>
+        <Field Name="AugContFormat">
+          <DataField>AugContFormat</DataField>
+        </Field>
+        <Field Name="SepCont">
+          <DataField>SepCont</DataField>
+        </Field>
+        <Field Name="SepContFormat">
+          <DataField>SepContFormat</DataField>
+        </Field>
+        <Field Name="OctCont">
+          <DataField>OctCont</DataField>
+        </Field>
+        <Field Name="OctContFormat">
+          <DataField>OctContFormat</DataField>
+        </Field>
+        <Field Name="NovCont">
+          <DataField>NovCont</DataField>
+        </Field>
+        <Field Name="NovContFormat">
+          <DataField>NovContFormat</DataField>
+        </Field>
+        <Field Name="DecCont">
+          <DataField>DecCont</DataField>
+        </Field>
+        <Field Name="DecContFormat">
+          <DataField>DecContFormat</DataField>
+        </Field>
+        <Field Name="Deposits">
+          <DataField>Deposits</DataField>
+        </Field>
+        <Field Name="DepositsFormat">
+          <DataField>DepositsFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
