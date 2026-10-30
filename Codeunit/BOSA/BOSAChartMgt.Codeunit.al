@@ -1,4 +1,4 @@
-codeunit 50020 "BOSA Chart Management"
+codeunit 50019 "BOSA Chart Management"
 {
     trigger OnRun()
     begin
